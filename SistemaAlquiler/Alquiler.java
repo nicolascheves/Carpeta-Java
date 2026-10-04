@@ -29,5 +29,6 @@ public abstract class Alquiler implements Sistema{
     }
 
     public abstract int getCantidadDisponible();
+    public abstract void alquilar(Alquiler a);
     public abstract void devolver(Alquiler a);
 }
