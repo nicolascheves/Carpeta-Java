@@ -18,7 +18,10 @@ public class Vehiculo extends Alquiler{
     public int getCantidadDisponible() {
         if(disponible) return 1; else return 0;
     }
-
+    public void alquilar(Alquiler a){
+        if(a != null && a.getCantidadDisponible == 1) this.disponible = false;
+        else System.ot.print("No disponible");
+    }
     public void devolver(Alquiler a){
         if(a != null)this.disponible = true;
     }
