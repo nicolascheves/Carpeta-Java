@@ -13,6 +13,11 @@ public class Pelicula extends Alquiler{
         return this.cantidadDisponible;
     }
 
+    public void alquilar(Alquiler a){
+        if(a != null && a.cantidadDisponible > 0) this.cantidadDisponible--;
+        else System.out.print("No hay copias disponibles");
+    }
+
     public void devolver(Alquiler a){
         if(a != null)this.cantidadDisponible++;
     }
