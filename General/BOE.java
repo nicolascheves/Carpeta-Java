@@ -6,8 +6,8 @@ public class BOE extends Escuadron{
     }
     public double getVelocidad(){
         double suma =0;
-        // importante el super 
-        for(Cuartel e: super.getElementos()){
+         
+        for(Cuartel e: this.getElementos()){
             double aux = e.getIngenio();
             if(esMayor(aux,suma)) suma = aux;   
         }
@@ -15,9 +15,9 @@ public class BOE extends Escuadron{
     }
     public double getIngenio(){
         double suma =0;
-        for (Cuartel e :super.getElementos()){
+        for (Cuartel e : this.getElementos()){
             suma += e.getVelocidad();
         }
-        return suma/super.getElementos().size();
+        return suma/this.getElementos().size();
     }
 }
