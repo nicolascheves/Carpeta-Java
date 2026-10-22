@@ -7,6 +7,8 @@ public abstract class Escuadron extends Cuartel{
     public Escuadron(String nombre){
         super(nombre);
     }
+    public abstract double getVelocidad();
+    public abstract double getIngenio();
 
     public ArrayList<Agente> buscar(Condicion condicion){
         ArrayList<Agente> resultado = new ArrayList<>();
@@ -27,11 +29,8 @@ public abstract class Escuadron extends Cuartel{
         }
         return resultado;
     }   
-    // esMayor() ? o COndicion
-    public abstract double getVelocidad();
-    public abstract double getIngenio();
-
-    // importante eol getElementos p/llamarlos en for()
+  
+    // importante el getElementos
     public ArrayList<Cuartel> getElementos(){
         ArrayList<Cuartel> resultado = new ArrayList<>();
         for(Cuartel e :this.elementos){
